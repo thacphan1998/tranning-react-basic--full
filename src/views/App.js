@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import MyComponent from './Example/MyComponent';
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-          Thac Phan Welcome
         </p>
+        <MyComponent />
         <a
           className="App-link"
           href="https://reactjs.org"
