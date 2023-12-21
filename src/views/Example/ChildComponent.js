@@ -15,14 +15,10 @@ class ChildComponent extends React.Component {
 
     render() {
 
-        let { fname, lname, age, jobLists } = this.props;
+        let { jobLists } = this.props;
         let { showJobs } = this.state;
         return (
             <>
-                <div style={this.props.style} >
-                    Name: {fname} {lname}  -  Age: {age}
-                </div>
-
                 {showJobs === false ?
                     <div>
                         <button onClick={() => this.handleShowHide()}>Show</button>
@@ -32,7 +28,7 @@ class ChildComponent extends React.Component {
                         <div className="jobLists">
                             {
                                 jobLists.map((item) => {
-                                    if (item.salary >= 500) {
+                                    if (item.salary >= 100) {
                                         return (
                                             <div className="itemJob" key={item.id}>
                                                 <p style={{ fontSize: '30px' }}>{item.title} - {item.salary} $</p>
