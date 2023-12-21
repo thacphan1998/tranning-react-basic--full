@@ -21,6 +21,9 @@ class AddComponent extends react.Component {
     handleSubmit = (event) => {
         // console.log(this.state);
         event.preventDefault();
+        if (!this.state.title || !this.state.Salary) {
+            alert('ban chua nhap: vui long nhap du cac field :))')
+        }
         this.props.addNewJob({
             id: Math.floor(Math.random() * 1001),
             title: this.state.title,

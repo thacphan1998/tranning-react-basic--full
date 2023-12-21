@@ -18,6 +18,17 @@ class MyComponent extends React.Component {
         })
     }
 
+    deleteJob = (itemJob) => {
+        // this.setState({
+        //     jobLists: [...this.state.jobLists]
+        // })
+
+        // let filteredJobLists = this.state.jobLists.filter(item => item.id !== itemJob.id)
+        this.setState({
+            jobLists: [...this.state.jobLists.filter(item => item.id !== itemJob.id)]
+        });
+    }
+
     render() {
         console.log('Call render: ', this.state)
         return (
@@ -29,6 +40,7 @@ class MyComponent extends React.Component {
                 <ChildComponent
                     style={{ fontSize: '30px', color: 'yellow' }}
                     jobLists={this.state.jobLists}
+                    deleteJob={this.deleteJob}
                 />
             </>
         )
