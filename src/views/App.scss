@@ -37,3 +37,54 @@
     transform: rotate(360deg);
   }
 }
+
+.listTodoContainer {
+  min-width: 400px;
+  max-width: 1500px;
+
+  input {
+    font-size: 25px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 5px;
+
+    &:hover {
+      background-color: #282c34;
+      border: 1px solid red;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .addTodo {
+    display: flex;
+    justify-content: space-between;
+    border: 1px #fff solid;
+    padding: 10px;
+  }
+
+  .listTodoWrap {
+
+    border: 1px #fff solid;
+    padding: 10px;
+
+    .itemTodo {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-bottom: 1px #fff solid;
+      padding-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+        border: 0;
+      }
+
+      span {
+        font-size: 25px;
+      }
+    }
+  }
+}

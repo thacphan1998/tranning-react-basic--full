@@ -24,10 +24,16 @@ class AddComponent extends react.Component {
         if (!this.state.title || !this.state.Salary) {
             alert('ban chua nhap: vui long nhap du cac field :))')
         }
+
         this.props.addNewJob({
             id: Math.floor(Math.random() * 1001),
             title: this.state.title,
             salary: this.state.Salary
+        })
+
+        this.setState({
+            title: '',
+            Salary: ''
         })
     }
     render() {
