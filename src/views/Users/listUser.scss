@@ -1,0 +1,22 @@
+.listUserContainer {
+    font-size: 25px;
+
+    .listUserContent {
+        min-width: 300px;
+        max-width: 100px;
+        border: 1px solid #fff;
+        padding: 10px;
+
+        .listUserItem {
+            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

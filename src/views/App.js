@@ -4,6 +4,8 @@ import MyComponent from './Example/MyComponent';
 import ListTodo from './Todos/ListTodo';
 import Nav from './Nav/Nav';
 import Home from './Example/Home';
+import ListUser from './Users/ListUser';
+import DetailUser from './Users/DetailUser';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -20,7 +22,7 @@ function App() {
             Welcome to React.js tranning
           </p>
           <br />
-          <switch>
+          <Switch>
             <Route path="/" exact>
               <Home />
             </Route>
@@ -30,7 +32,13 @@ function App() {
             <Route path="/about">
               <MyComponent />
             </Route>
-          </switch>
+            <Route path="/user" exact>
+              <ListUser />
+            </Route>
+            <Route path="/user/:id">
+              <DetailUser />
+            </Route>
+          </Switch>
           <br />
         </header>
         <ToastContainer
