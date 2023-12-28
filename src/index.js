@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './views/App';
 import './styles/global.scss';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './store/reducers/rootReducer';
 
+const reduxStore = createStore(rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); //nạp dữ liệu store từ file "rootReducer.js" vào redux thông qua hàm createStore();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
